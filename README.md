@@ -424,22 +424,6 @@ CPA = Ad Spend ÷ Conversions
 
 > Paid Search CPA of ₦211.45 likely exceeds the margin on Basic Plan after operational costs — making every Paid Search customer a guaranteed loss before refunds are counted.
 
-#### How the ₦139K Paid Search Loss Was Calculated
-
-```
-Paid Search Ad Spend:    ₦191,990
-Paid Search Revenue:     ₦52,882
-                         ________
-Net Loss (gross):        ₦139,108  →  ₦139K
-
-Including refunds:
-Paid Search Net Revenue:  ₦28,922  (after ₦23,960 refunds)
-Ad Spend:                ₦191,990
-True Loss:               ₦163,068  →  ₦163K
-```
-
-The ₦139K figure is the conservative version using gross revenue. The true loss after refunds is ₦163K.
-
 ---
 
 ### 9.3 Refund Analysis
@@ -451,7 +435,7 @@ Refund Rate = Total Refunds ÷ Gross Revenue × 100
 Refund Rate = ₦81,510 ÷ ₦326,530 × 100 = 24.96%
 ```
 
-Always divide by **gross revenue** — not net revenue. Using net revenue creates a circular distortion because it divides refunds by a figure that already has refunds removed from it.
+Always divide by **gross revenue** not net revenue. Using net revenue creates a circular distortion because it divides refunds by a figure that already has refunds removed from it.
 
 **Industry benchmarks:**
 
@@ -586,17 +570,6 @@ DIVIDE(
 )
 ```
 
-### Formatting Rules
-
-| Measure | Correct Format | Never Format As |
-|---|---|---|
-| ROAS | Number — 2 decimal places e.g. 0.89 | Percentage |
-| ROI | Percentage e.g. −10.59% | Multiple |
-| CPL | Currency e.g. ₦6.84 | Percentage |
-| CPA | Currency e.g. ₦211.45 | Percentage |
-| Refund Rate | Percentage e.g. 24.96% | Currency |
-| Conversion Rate | Percentage e.g. 19.23% | Currency |
-
 ---
 
 ## 11. Data Visualization — Page 1 Overview
@@ -624,8 +597,6 @@ Four cards across the top right of the dashboard give an instant business health
 
 ### 11.2 Best-Selling Product — Q9
 
-**Visual:** Donut chart with revenue labels and percentage shares
-**Pivot setup:** Rows = Product · Values = SUM of Revenue
 
 | Product | Revenue | Share |
 |---|---|---|
@@ -635,16 +606,11 @@ Four cards across the top right of the dashboard give an instant business health
 | Basic Plan | ₦16,140 | 4.94% |
 | Add-on Pack | ₦7,840 | 2.40% |
 
-**Why a donut chart:** Donut charts communicate proportional share immediately — the reader sees Enterprise Plan occupying more than half the ring before reading a single number.
-
 **Insight:** Enterprise Plan generates more than twice the revenue of the next best product. However it also carries a 31.36% refund rate — the best-selling product is simultaneously the highest-risk product in the business.
 
 ---
 
 ### 11.3 Lead Sources — Q1
-
-**Visual:** Horizontal bar chart sorted by lead volume — highest to lowest
-**Pivot setup:** Rows = Channel · Values = SUM of Leads
 
 | Channel | Leads |
 |---|---|
@@ -655,7 +621,6 @@ Four cards across the top right of the dashboard give an instant business health
 | Paid Search | 4,440 |
 | Email | 3,900 |
 
-**Why horizontal bars:** Channel name labels are long text. A horizontal bar chart gives them clean space on the Y axis without overlapping or angling.
 
 **Insight:** Referral drives the most leads but generates the least revenue. Lead volume and lead quality are entirely different metrics. Q1 must always be read alongside Q2.
 
@@ -663,10 +628,6 @@ Four cards across the top right of the dashboard give an instant business health
 
 ### 11.4 Revenue Sources — Q2
 
-**Visual:** Horizontal bar chart sorted by revenue — highest to lowest
-**Pivot setup:** Rows = Channel · Report Filter = Status: Completed · Values = SUM of Revenue
-
-| Channel | Revenue |
 |---|---|
 | Direct | ₦79,313 |
 | Paid Search | ₦52,882 |
@@ -681,8 +642,6 @@ Four cards across the top right of the dashboard give an instant business health
 
 ### 11.5 Channel Activity Table — Q3 and Q5
 
-**Visual:** Data table with conditional formatting — green/yellow/red colour scale applied to every value column
-**Pivot setup:** Rows = Channel · Values = Leads, Conversions, Revenue · Calculated Field = Conversions/Leads
 
 | Channel | Leads | Conversions | Revenue | Conv Rate |
 |---|---|---|---|---|
@@ -693,19 +652,12 @@ Four cards across the top right of the dashboard give an instant business health
 | Paid Search | 4.44K | 908 | ₦52.88K | 20.43% |
 | Email | 3.90K | 816 | ₦50.36K | 20.92% |
 
-**How to add a Calculated Field in Excel:**
-PivotTable Analyze → Fields, Items & Sets → Calculated Field → Name: Conv Rate → Formula: `= Conversions / Leads` → OK
 
 **Insight:** Email has the fewest leads but the highest conversion rate among paid channels. Email subscribers arrive already educated and committed — they opted in voluntarily which means their purchase intent is genuine before they even see an offer.
 
 ---
 
 ### 11.6 Revenue Trend by Month — Q8
-
-**Visual:** Vertical column chart — 12 monthly bars in chronological order
-**Pivot setup:** Rows = Month sorted by Month_Num · Values = SUM of Net_Revenue
-
-> **Important:** Always sort months using Month_Num (1, 2, 3...) not the Month text column. Sorting alphabetically orders months as Apr, Aug, Dec, Feb — breaking the trend line entirely.
 
 | Period | Revenue | Trend |
 |---|---|---|
@@ -746,9 +698,6 @@ Five cards delivering an immediate efficiency diagnosis before a single chart is
 
 ### 12.2 Cost Efficiency Table
 
-**Visual:** Ranked data table with conditional formatting — sorted most efficient to least efficient
-**Pivot setup:** Rows = Channel · Values = Ad_Spend, Leads, CPL measure, Conversions, CPA measure
-
 | Channel | Ads Spent | Leads | CPL | Conversions | CPA |
 |---|---|---|---|---|---|
 | Organic Search 🟢 | ₦0.00 | 4.98K | ₦0.00 | 1,100 | ₦0.00 |
@@ -758,16 +707,11 @@ Five cards delivering an immediate efficiency diagnosis before a single chart is
 | Social Media 🟡 | ₦146.55K | 5.06K | ₦28.94 | 943 | ₦155.40 |
 | Paid Search 🔴 | ₦191.99K | 4.44K | ₦43.20 | 908 | ₦211.45 |
 
-**Conditional formatting:** Red-Yellow-Green scale reversed on CPL and CPA columns so highest cost = darkest red, zero cost = darkest green. Free channel rows manually set to solid green fill.
-
 **Key finding:** Three free channels generate ₦171K revenue at ₦0 cost. Three paid channels spend ₦365K to generate ₦155K — a net loss of ₦210K. The free channels are outperforming every paid channel on every efficiency metric.
 
 ---
 
 ### 12.3 ROAS by Channel
-
-**Visual:** Vertical column chart with two reference lines
-**Data setup:** Helper table — Channel · ROAS · Break Even (1.0 for all rows) · Target (3.0 for all rows)
 
 **Reference lines:**
 - 🔴 Red dashed line at **1.0x** : Break-even point. Below this = losing money on ads
