@@ -770,17 +770,8 @@ Five cards delivering an immediate efficiency diagnosis before a single chart is
 **Data setup:** Helper table — Channel · ROAS · Break Even (1.0 for all rows) · Target (3.0 for all rows)
 
 **Reference lines:**
-- 🔴 Red dashed line at **1.0x** — Break-even point. Below this = losing money on ads
-- 🟢 Green dashed line at **3.0x** — Healthy target. Above this = strong performance
-
-**How to add reference lines in Excel:**
-1. Build helper table with Channel · ROAS · Break Even · Target columns
-2. Select all four columns → Insert → Clustered Column chart
-3. Right-click Break Even series → Change Series Chart Type → Line
-4. Right-click Target series → Change Series Chart Type → Line
-5. Format Break Even line → Red → Dashed → 2pt width
-6. Format Target line → Green → Dashed → 2pt width
-7. Add data labels on the last point of each line — label as "Break-Even 1.0x" and "Target 3.0x"
+- 🔴 Red dashed line at **1.0x** : Break-even point. Below this = losing money on ads
+- 🟢 Green dashed line at **3.0x** : Healthy target. Above this = strong performance
 
 | Channel | ROAS | Zone |
 |---|---|---|
@@ -795,9 +786,6 @@ Five cards delivering an immediate efficiency diagnosis before a single chart is
 
 ### 12.4 Refunds Trend by Month
 
-**Visual:** Line chart — monthly refund totals across the full year
-**Pivot setup:** Rows = Month sorted by Month_Num · Filter = Status: Refunded · Values = SUM of Refund_Amount
-
 | Month | Refunds | Pattern |
 |---|---|---|
 | Jan | ₦2,600 | Baseline |
@@ -810,14 +798,11 @@ Five cards delivering an immediate efficiency diagnosis before a single chart is
 | Oct – Nov | ₦9,290 – ₦11,330 | Sustained high |
 | Dec | ₦11,980 | Highest month |
 
-**Critical pattern:** Refunds are accelerating — not just growing with revenue. November had near-peak refunds despite lower revenue than September. The refund rate itself is worsening over time — meaning the problem is structural not just volumetric.
+**Critical pattern:** Refunds are accelerating, not just growing with revenue. November had near-peak refunds despite lower revenue than September. The refund rate itself is worsening over time — meaning the problem is structural not just volumetric.
 
 ---
 
 ### 12.5 Refunds Channel and Product Matrix
-
-**Visual:** Cross-tabulation pivot table with conditional formatting
-**Pivot setup:** Rows = Channel · Columns = Product · Values = SUM of Refund_Amount · Filter = Status: Refunded
 
 | Channel | Add-on | Basic | Consulting | Enterprise | Premium |
 |---|---|---|---|---|---|
@@ -828,7 +813,7 @@ Five cards delivering an immediate efficiency diagnosis before a single chart is
 | Direct | ₦0 | ₦198 | ₦3,500 | ₦9,990 | ₦2,390 |
 | Referral | ₦0 | ₦594 | ₦4,500 | ₦5,990 | ₦2,990 |
 
-**Why a matrix over two separate charts:** A channel chart and a product chart each show one dimension. The matrix shows the intersection — which specific combination is causing the most damage. ₦18,980 in the Paid Search + Enterprise cell is a finding that no single-dimension chart can surface alone.
+**Why a matrix over two separate charts:** A channel chart and a product chart each show one dimension. The matrix shows the intersection which specific combination is causing the most damage. ₦18,980 in the Paid Search + Enterprise cell is a finding that no single-dimension chart can surface alone.
 
 ---
 
@@ -836,25 +821,25 @@ Five cards delivering an immediate efficiency diagnosis before a single chart is
 
 The following insights emerged from the combined analysis across both dashboard pages.
 
-### Insight 1 — Lead Volume and Revenue Are Inversely Related for Referral
-Referral is the number one channel for leads (6,004) but the number six channel for revenue (₦45,477). It also carries the lowest conversion rate at 16.07%. The business is likely measuring Referral success by lead count — the wrong metric for a revenue-focused organisation.
+### Insight 1 : Lead Volume and Revenue Are Inversely Related for Referral
+Referral is the number one channel for leads (6,004) but the number six channel for revenue (₦45,477). It also carries the lowest conversion rate at 16.07%. The business is likely measuring Referral success by lead count, the wrong metric for a revenue-focused organisation.
 
-### Insight 2 — The Free Channels Are Carrying the Business
+### Insight 2 : The Free Channels Are Carrying the Business
 Direct, Organic Search, and Referral generate ₦171K in combined revenue at ₦0 advertising cost. The three paid channels spend ₦365K to generate ₦155K — a net cash loss of ₦210K. Removing all paid advertising would make this business more profitable, not less.
 
-### Insight 3 — Paid Search Is the Single Most Destructive Channel
-Paid Search scores worst on every efficiency metric simultaneously — highest ad spend (₦191.99K), lowest ROAS (0.28x), highest CPA (₦211.45), and highest refund rate (45.31%). Nearly half of everything Paid Search generates gets returned. The ₦139K net loss — ₦163K after refunds — makes it the clearest candidate for immediate budget reallocation.
+### Insight 3 : Paid Search Is the Single Most Destructive Channel
+Paid Search scores worst on every efficiency metric simultaneously, highest ad spend (₦191.99K), lowest ROAS (0.28x), highest CPA (₦211.45), and highest refund rate (45.31%). Nearly half of everything Paid Search generates gets returned. The ₦139K net loss — ₦163K after refunds — makes it the clearest candidate for immediate budget reallocation.
 
-### Insight 4 — Enterprise Plan Is the Highest Value and Highest Risk Product
+### Insight 4 : Enterprise Plan Is the Highest Value and Highest Risk Product
 Enterprise Plan generates 51.71% of all revenue — the dominant product by far. But it also carries a 31.36% refund rate. Nearly one in three Enterprise Plan purchases gets returned. Protecting this product's retention is the single biggest margin lever in the business.
 
-### Insight 5 — Email Is the Most Underinvested Asset
+### Insight 5 : Email Is the Most Underinvested Asset
 Email has the lowest CPL of all paid channels at ₦6.84, the highest conversion rate among paid channels at 20.92%, and the lowest refund rate among paid channels at 11.89%. Despite this it has the smallest budget (₦26,670) and fewest leads (3,900). Every efficiency metric points to Email as the channel most deserving of increased investment.
 
-### Insight 6 — Refunds Are Accelerating, Not Just Growing
+### Insight 6 : Refunds Are Accelerating, Not Just Growing
 Monthly refunds grew from ₦2,600 in January to ₦11,980 in December — a 361% increase. Revenue grew from ₦22,600 to ₦27,800 over the same period — a 23% increase. Refunds are growing 15 times faster than revenue. Without intervention this trend will eventually make the business unprofitable even if revenue continues growing.
 
-### Insight 7 — Paid Channels Are Attracting the Wrong Enterprise Customers
+### Insight 7 : Paid Channels Are Attracting the Wrong Enterprise Customers
 The Paid Search + Enterprise Plan refund combination (₦18,980) and Social Media + Enterprise Plan (₦12,990) both point to the same pattern: paid ads are driving customers to the most expensive product who are not genuinely ready for an enterprise commitment. The ads are creating purchase intent that the product cannot satisfy — leading to immediate refunds.
 
 ---
@@ -863,9 +848,7 @@ The Paid Search + Enterprise Plan refund combination (₦18,980) and Social Medi
 
 Based on the analysis across both pages three specific recommendations are made in order of urgency and potential impact.
 
----
-
-### Recommendation 1 — Pause Paid Search Immediately 🔴
+### Recommendation 1 : Pause Paid Search Immediately 🔴
 
 **Finding:** Paid Search spends ₦191.99K to generate ₦52.88K in gross revenue — a net loss of ₦139K before refunds and ₦163K after. Its CPA of ₦211.45 exceeds the margin on Basic and Premium Plans. Its 45.31% refund rate means nearly half of everything it generates gets returned.
 
@@ -873,9 +856,7 @@ Based on the analysis across both pages three specific recommendations are made 
 
 **Expected outcome:** Minimal revenue impact — Paid Search Net Revenue after refunds is only ₦28,922. Annual cost saving of ₦191,990 produces a net bottom-line improvement of approximately ₦163,000.
 
----
-
-### Recommendation 2 — Fix Enterprise Plan Onboarding and Expectation-Setting 🔴
+### Recommendation 2 : Fix Enterprise Plan Onboarding and Expectation-Setting 🔴
 
 **Finding:** Enterprise Plan generates 51.71% of all revenue but carries a 31.36% refund rate. The Paid Search + Enterprise combination alone generates ₦18,980 in refunds. Customers are buying the most expensive product and immediately returning it — indicating a fundamental mismatch between what marketing promises and what the product delivers.
 
@@ -883,7 +864,6 @@ Based on the analysis across both pages three specific recommendations are made 
 
 **Expected outcome:** A 10-percentage-point reduction in Enterprise refund rate — from 31.36% to 21.36% — would recover approximately ₦16,883 in previously lost revenue per year.
 
----
 
 ### Recommendation 3 — Invest in Email List Growth and Organic Content 🟢
 
@@ -901,7 +881,7 @@ This project set out to answer nine core marketing performance questions for a B
 
 All nine questions were answered across two interactive dashboard pages. Three additional problems that nobody had thought to ask about were uncovered in the process — a paid advertising programme losing money on every paid channel, a top-selling product with a 31% refund rate, and a refund acceleration trend growing 15 times faster than revenue.
 
-The most important finding is not technical — it is strategic. The free channels — Direct, Organic Search, and Referral — are quietly outperforming the paid channels on almost every metric that matters. The business does not have a traffic problem. It has a traffic quality problem — and it is currently paying ₦365K per year to make that problem worse.
+The most important finding is not technical, it is strategic. The free channels — Direct, Organic Search, and Referral — are quietly outperforming the paid channels on almost every metric that matters. The business does not have a traffic problem. It has a traffic quality problem — and it is currently paying ₦365K per year to make that problem worse.
 
 The data tells a clear and uncomfortable story. The recommendations are equally clear: stop investing in channels that destroy value, protect the product that generates most of the revenue, and redirect resources toward the channels and assets that compound returns over time at near-zero cost.
 
@@ -913,25 +893,25 @@ A business that acts on these three findings does not need to grow its revenue t
 
 Acknowledging limitations is a mark of analytical integrity. The following limitations apply to this project and should be considered when interpreting the findings.
 
-### 16.1 Synthetic Dataset
+### Synthetic Dataset
 The dataset was designed and built from scratch rather than extracted from a real business system. It reflects realistic proportions but does not contain the outliers, missing values, structural inconsistencies, or unexpected patterns that real-world data typically presents. Findings would need validation against actual business data before acting on them.
 
-### 16.2 Single Year of Data
+### Single Year of Data
 The analysis covers one fiscal year. With only 12 data points for monthly trends it is not possible to confirm whether patterns — the September peak, the February dip, the refund acceleration — are genuine recurring trends or single-year anomalies. A minimum of two to three years of data is needed to separate trend from noise.
 
-### 16.3 No Customer-Level Data
+### No Customer-Level Data
 The dataset aggregates by channel and product. A complete analysis would include customer lifetime value, cohort retention rates, repeat purchase behaviour, and time-to-refund data. Without these the recommendations — while directionally correct — cannot be precisely quantified in terms of long-term revenue impact.
 
-### 16.4 No Cost of Goods or Operational Costs
+### No Cost of Goods or Operational Costs
 Ad spend is the only cost modelled. A complete profitability analysis would include product development costs, staff costs, platform and hosting fees, payment processing fees, and customer support costs. Including these would make the ROI figures significantly more negative than the −10.59% shown.
 
-### 16.5 No External Benchmarks Formally Sourced
+### No External Benchmarks Formally Sourced
 Industry ROAS, CPA, and refund rate benchmarks were referenced throughout based on general knowledge of B2B SaaS performance standards. These were not sourced from specific published industry reports. A formal business analysis should cite benchmarks from sources such as Nielsen, Forrester, or published SaaS benchmarking studies.
 
-### 16.6 Ad Spend Approximation
+### Ad Spend Approximation
 The corrected Ad Spend figure of ₦365,210 was derived using a MAX-per-channel-per-month approach through the SUMMARIZE DAX measure. In a real business the monthly channel budget would be extracted directly from the ad platform and joined separately — producing more precise figures than this approximation method.
 
-### 16.7 Static Goal Assumption
+### Static Goal Assumption
 The monthly revenue goal of ₦2,000,000 was set as a fixed constant throughout the year. In a real business monthly targets typically vary by quarter, adjust for seasonality, and increase as the business grows. A static goal slightly misrepresents months where the actual target would have been higher or lower.
 
 ---
@@ -956,7 +936,7 @@ The monthly revenue goal of ₦2,000,000 was set as a fixed constant throughout 
 
 ---
 
-## Glossary — Quick Reference
+## Glossary : Quick Reference
 
 | Term | Plain English |
 |---|---|
@@ -979,26 +959,6 @@ The monthly revenue goal of ₦2,000,000 was set as a fixed constant throughout 
 
 ---
 
-## How to Use the Slicers
-
-Both pages have three interactive slicers on the left panel — Month, Product, and Channel.
-
-Clicking any value instantly filters every chart and table on the page to show only that view.
-
-| Slicer | Example Use Case |
-|---|---|
-| Month | Select September to see which channel drove the peak revenue month |
-| Product | Select Enterprise Plan to see which channels sell it and which refund it most |
-| Channel | Select Paid Search to see its full cost, revenue, refund, and conversion picture |
-
-**To connect slicers to multiple pivots:**
-Right-click any slicer → Report Connections → tick all pivot tables to control → OK
-
-All pivot tables must come from the same data source for slicer connections to work.
-
-> **Power Move:** Combine all three slicers. Select `Paid Search` + `Enterprise Plan` + any month to see the exact damage that combination causes in isolation. Three clicks — no formulas needed.
-
----
 
 *⭐ If this project was useful, consider giving the repository a star.*
 
