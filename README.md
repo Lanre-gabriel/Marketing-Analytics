@@ -2,7 +2,7 @@
 
 ### A Two-Page Interactive Excel Dashboard for a B2B SaaS Business
 
-![Dashboard Preview](dashboard_preview.png)
+![Dashboard Preview](2PAGE.png)
 
 **Analyst:** Lanre Gabriel · Data Analyst
 **Tool:** Microsoft Excel — Pivot Tables · DAX Measures · Slicers · Conditional Formatting
@@ -159,7 +159,7 @@ Because this is synthetic data it does not contain the outliers, missing values,
 The raw dataset was structured as a flat file a single table where every row represents one transaction and every column represents one attribute of that transaction.
 
 **Dataset Preview**
-
+![Image Preview](Mktdata.PNG)
 
 *Above shows a representative sample. Full dataset contains 280+ rows.*
 
@@ -603,7 +603,7 @@ DIVIDE(
 
 Page 1 answers the nine core business performance questions. It is the **what is happening** page — descriptive, accessible, and designed to give a complete marketing picture at a glance.
 
-![Page 1 Dashboard](page1_dashboard.png)
+![Dashboard Preview](MKTQR.png)
 
 ---
 
@@ -724,7 +724,7 @@ PivotTable Analyze → Fields, Items & Sets → Calculated Field → Name: Conv 
 
 Page 2 answers the questions Page 1 raised but could not answer alone. It is the **why it is bleeding and what to do about it** page — diagnostic and actionable.
 
-![Page 2 Dashboard](page2_dashboard.png)
+![Dashboard Preview](BK.png)
 
 ---
 
